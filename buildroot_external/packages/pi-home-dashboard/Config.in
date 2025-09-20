@@ -1,0 +1,5 @@
+config BR2_PACKAGE_PI_HOME_DASHBOARD
+    bool "Dashboard for PI Home OS"
+    depends on BR2_PACKAGE_HOST_RUSTC_TARGET_ARCH_SUPPORTS
+    help
+      Minimal Rust HTTP server to serve sensor data

@@ -1,0 +1,28 @@
+#!/bin/sh
+# Simple init script for pi-home-dashboard
+
+DAEMON=/usr/bin/pi-home-dashboard
+PIDFILE=/var/run/pi-home-dashboard.pid
+
+case "$1" in
+  start)
+    echo "Starting pi-home-dashboard..."
+    start-stop-daemon -S -b -m -p "$PIDFILE" --exec "$DAEMON"
+    ;;
+  stop)
+    echo "Stopping pi-home-dashboard..."
+    start-stop-daemon -K -p "$PIDFILE"
+    rm -f "$PIDFILE"
+    ;;
+  restart)
+    $0 stop
+    sleep 1
+    $0 start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart|status}"
+    exit 1
+    ;;
+esac
+
+exit 0

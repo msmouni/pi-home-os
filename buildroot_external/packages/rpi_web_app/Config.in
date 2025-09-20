@@ -1,4 +1,0 @@
-config BR2_PACKAGE_RPI_WEB_APP
-    bool "Rust Web Server for RPi Sensors"
-    help
-      Minimal Rust HTTP server to serve sensor data
