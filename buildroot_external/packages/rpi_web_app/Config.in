@@ -1,5 +1,0 @@
-config BR2_PACKAGE_RPI_WEB_APP
-    bool "Raspberry Pi Flask Web App"
-    depends on BR2_PACKAGE_PYTHON_FLASK
-    help
-      Installs the Flask-based Python web application.

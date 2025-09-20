@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    start)
+        echo "Starting pi-home-sensors"
+        start-stop-daemon -S -n pi-home-sensors -a /usr/bin/pi-home-sensors -- -d
+        ;;
+    stop)
+        echo "Stopping pi-home-sensors"
+        start-stop-daemon -K -n pi-home-sensors
+        ;;
+    restart)
+        "$0" stop
+        "$0" start
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+        ;;
+esac
+
+exit 0

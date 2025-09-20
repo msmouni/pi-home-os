@@ -1,0 +1,5 @@
+config BR2_PACKAGE_PI_HOME_SENSORS
+    bool "pi-home-sensors"
+    select BR2_PACKAGE_SQLITE
+    help
+      A simple sensor application that uses SQLite to store sensors data.
