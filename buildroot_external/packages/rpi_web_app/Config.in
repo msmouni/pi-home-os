@@ -1,5 +1,4 @@
 config BR2_PACKAGE_RPI_WEB_APP
-    bool "Raspberry Pi Flask Web App"
-    depends on BR2_PACKAGE_PYTHON_FLASK
+    bool "Rust Web Server for RPi Sensors"
     help
-      Installs the Flask-based Python web application.
+      Minimal Rust HTTP server to serve sensor data

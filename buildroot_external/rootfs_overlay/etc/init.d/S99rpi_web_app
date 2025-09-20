@@ -1,40 +1,28 @@
 #!/bin/sh
+# Simple init script for rpi_web_app
 
-APP_DIR=/usr/share/rpi_web_app
-APP_BIN=/usr/bin/python3
-APP=$APP_DIR/app.py
+DAEMON=/usr/bin/rpi_web_app
 PIDFILE=/var/run/rpi_web_app.pid
 
-start() {
-    echo "Starting rpi_web_app..."
-    if [ -f $PIDFILE ]; then
-        echo "Already running (pid=$(cat $PIDFILE))"
-        exit 1
-    fi
-    $APP_BIN $APP &
-    echo $! > $PIDFILE
-}
-
-stop() {
-    echo "Stopping rpi_web_app..."
-    if [ -f $PIDFILE ]; then
-        kill $(cat $PIDFILE) && rm -f $PIDFILE
-    else
-        echo "Not running"
-    fi
-}
-
-restart() {
-    stop
-    sleep 1
-    start
-}
-
 case "$1" in
-    start) start ;;
-    stop) stop ;;
-    restart) restart ;;
-    *) echo "Usage: $0 {start|stop|restart}" ; exit 1 ;;
+  start)
+    echo "Starting rpi_web_app..."
+    start-stop-daemon -S -b -m -p "$PIDFILE" --exec "$DAEMON"
+    ;;
+  stop)
+    echo "Stopping rpi_web_app..."
+    start-stop-daemon -K -p "$PIDFILE"
+    rm -f "$PIDFILE"
+    ;;
+  restart)
+    $0 stop
+    sleep 1
+    $0 start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart|status}"
+    exit 1
+    ;;
 esac
 
 exit 0
