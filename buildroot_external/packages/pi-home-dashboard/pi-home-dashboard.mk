@@ -14,8 +14,8 @@ define PI_HOME_DASHBOARD_INSTALL_TARGET_CMDS
 		$(TARGET_DIR)/usr/bin/pi-home-dashboard
 
 	# Install web resources
-	$(INSTALL) -D -m 0644 $(@D)/templates/index.html \
-		$(TARGET_DIR)/usr/share/pi-home-dashboard/templates/index.html
+	$(INSTALL) -D -m 0644 $(@D)/templates/* \
+		$(TARGET_DIR)/usr/share/pi-home-dashboard/templates/
 endef
 
 $(eval $(cargo-package))
