@@ -1,2 +1,3 @@
 source "$BR2_EXTERNAL_project_customization_PATH/packages/pi-home-sensors/Config.in"
 source "$BR2_EXTERNAL_project_customization_PATH/packages/pi-home-dashboard/Config.in"
+source "$BR2_EXTERNAL_project_customization_PATH/packages/pi-home-display/Config.in"
