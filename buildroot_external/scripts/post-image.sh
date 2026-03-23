@@ -19,4 +19,8 @@ append_if_not_exists "# Appending I2C settings" "$CONFIG_FILE"
 append_if_not_exists "dtparam=i2c_arm=on" "$CONFIG_FILE"
 append_if_not_exists "dtparam=i2c1=on" "$CONFIG_FILE"
 
+append_if_not_exists "# Appending SPI settings" "$CONFIG_FILE"
+append_if_not_exists "dtparam=spi=on" "$CONFIG_FILE"
+append_if_not_exists "dtoverlay=piscreen,speed=16000000,invx=1" "$CONFIG_FILE"
+
 ./board/raspberrypi4/post-image.sh

@@ -1,0 +1,4 @@
+config BR2_PACKAGE_PI_HOME_LAFVIN_UI
+    bool "pi-home-lafvin-ui"
+    help
+      An application that handles LAFVIN DISPLAY.
