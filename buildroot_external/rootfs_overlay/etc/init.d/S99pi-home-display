@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    start)
+        echo "Starting pi-home-display"
+        start-stop-daemon -S -b -n pi-home-display -a /usr/bin/pi-home-display
+        ;;
+    stop)
+        echo "Stopping pi-home-display"
+        start-stop-daemon -K -n pi-home-display
+        ;;
+    restart)
+        "$0" stop
+        "$0" start
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+        ;;
+esac
+
+exit 0

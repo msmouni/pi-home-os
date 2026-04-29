@@ -1,0 +1,5 @@
+config BR2_PACKAGE_PI_HOME_DISPLAY
+    bool "pi-home-display"
+    select BR2_PACKAGE_SQLITE
+    help
+      An application that handles multiple display.
