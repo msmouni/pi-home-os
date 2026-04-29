@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    start)
+        echo "Starting pi-home-lafvin-ui"
+        start-stop-daemon -S -b -n pi-home-lafvin-ui -a /usr/bin/pi-home-lafvin-ui
+        ;;
+    stop)
+        echo "Stopping pi-home-lafvin-ui"
+        start-stop-daemon -K -n pi-home-lafvin-ui
+        ;;
+    restart)
+        "$0" stop
+        "$0" start
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+        ;;
+esac
+
+exit 0
