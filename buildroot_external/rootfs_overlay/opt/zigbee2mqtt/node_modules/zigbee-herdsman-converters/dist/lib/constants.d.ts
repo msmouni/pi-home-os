@@ -1,0 +1,160 @@
+import type { KeyValueAny, KeyValueNumberString, ValuesOf } from "./types";
+export declare const OneJanuary2000: number;
+export declare const defaultBindGroup = 901;
+export declare const repInterval: {
+    HOUR: number;
+    MAX: number;
+    MINUTE: number;
+    SECONDS_10: number;
+    MINUTES_10: number;
+    MINUTES_15: number;
+    MINUTES_30: number;
+    MINUTES_5: number;
+    SECONDS_5: number;
+};
+export type ThermostatControlSequenceOfOperation = ValuesOf<typeof thermostatControlSequenceOfOperations>;
+export declare const thermostatControlSequenceOfOperations: {
+    readonly 0: "cooling_only";
+    readonly 1: "cooling_with_reheat";
+    readonly 2: "heating_only";
+    readonly 3: "heating_with_reheat";
+    readonly 4: "cooling_and_heating_4-pipes";
+    readonly 5: "cooling_and_heating_4-pipes_with_reheat";
+};
+export type ThermostatProgrammingOperationMode = ValuesOf<typeof thermostatProgrammingOperationModes>;
+export declare const thermostatProgrammingOperationModes: {
+    readonly 0: "setpoint";
+    readonly 1: "schedule";
+    readonly 3: "schedule_with_preheat";
+    readonly 4: "eco";
+};
+export type ThermostatSetpointChangeSource = ValuesOf<typeof thermostatSetpointChangeSource>;
+export declare const thermostatSetpointChangeSource: {
+    readonly 0: "manual";
+    readonly 1: "schedule";
+    readonly 2: "externally";
+};
+export type ThermostatSystemMode = ValuesOf<typeof thermostatSystemModes>;
+export declare const thermostatSystemModes: {
+    readonly 0: "off";
+    readonly 1: "auto";
+    readonly 3: "cool";
+    readonly 4: "heat";
+    readonly 5: "emergency_heating";
+    readonly 6: "precooling";
+    readonly 7: "fan_only";
+    readonly 8: "dry";
+    readonly 9: "sleep";
+};
+export declare const acovaThermostatSystemModes: KeyValueNumberString;
+export type ThermostatRunningMode = ValuesOf<typeof thermostatRunningMode>;
+export declare const thermostatRunningMode: {
+    readonly 0: "off";
+    readonly 3: "cool";
+    readonly 4: "heat";
+};
+export type ThermostatDayOfWeek = ValuesOf<typeof thermostatDayOfWeek>;
+export declare const thermostatDayOfWeek: {
+    readonly 0: "sunday";
+    readonly 1: "monday";
+    readonly 2: "tuesday";
+    readonly 3: "wednesday";
+    readonly 4: "thursday";
+    readonly 5: "friday";
+    readonly 6: "saturday";
+    readonly 7: "away_or_vacation";
+};
+export type ThermostatRunningState = ValuesOf<typeof thermostatRunningStates>;
+export declare const thermostatRunningStates: {
+    readonly 0: "idle";
+    readonly 1: "heat";
+    readonly 2: "cool";
+    readonly 4: "fan_only";
+    readonly 5: "heat";
+    readonly 6: "cool";
+    readonly 8: "heat";
+    readonly 9: "heat";
+    readonly A: "heat";
+    readonly D: "heat";
+    readonly 10: "cool";
+    readonly 12: "cool";
+    readonly 14: "cool";
+    readonly 15: "cool";
+    readonly 22: "cool";
+    readonly 33: "heat";
+    readonly 34: "cool";
+    readonly 65: "heat";
+    readonly 66: "cool";
+    readonly 32768: "idle";
+    readonly 32769: "heat";
+};
+export type ThermostatAcLouverPosition = ValuesOf<typeof thermostatAcLouverPositions>;
+export declare const thermostatAcLouverPositions: {
+    readonly 0: "fully_closed";
+    readonly 1: "fully_closed";
+    readonly 2: "fully_open";
+    readonly 3: "quarter_open";
+    readonly 4: "half_open";
+    readonly 5: "three_quarters_open";
+};
+export type ThermostatScheduleMode = ValuesOf<typeof thermostatScheduleMode>;
+export declare const thermostatScheduleMode: {
+    readonly 0: "heat";
+    readonly 1: "cool";
+};
+export type ThermostatFanMode = keyof typeof fanMode;
+export declare const fanMode: {
+    readonly off: 0;
+    readonly low: 1;
+    readonly medium: 2;
+    readonly high: 3;
+    readonly on: 4;
+    readonly auto: 5;
+    readonly smart: 6;
+};
+export declare const temperatureDisplayMode: KeyValueNumberString;
+export declare const danfossAdaptionRunStatus: KeyValueNumberString;
+export declare const danfossAdaptionRunControl: KeyValueNumberString;
+export declare const danfossWindowOpen: KeyValueNumberString;
+export declare const danfossRoomStatusCode: KeyValueNumberString;
+export declare const danfossRoomFloorSensorMode: KeyValueNumberString;
+export declare const danfossScheduleTypeUsed: KeyValueNumberString;
+export declare const danfossIcon2PreHeat: KeyValueNumberString;
+export declare const danfossIcon2PreHeatStatus: KeyValueNumberString;
+export declare const danfossOutputStatus: KeyValueNumberString;
+export declare const danfossSystemStatusWater: KeyValueNumberString;
+export declare const danfossSystemStatusCode: KeyValueNumberString;
+export declare const danfossAllySystemStatusCode: KeyValueNumberString;
+export declare const danfossHeatsupplyRequest: KeyValueNumberString;
+export declare const danfossMultimasterRole: KeyValueNumberString;
+export declare const danfossIconApplication: KeyValueNumberString;
+export declare const danfossIconForcedHeatingCooling: KeyValueNumberString;
+export declare const develcoInterfaceMode: KeyValueAny;
+export declare const keypadLockoutMode: KeyValueAny;
+export declare const lockSourceName: KeyValueNumberString;
+export declare const armMode: KeyValueNumberString;
+export declare const armNotification: {
+    0: string;
+    1: string;
+    2: string;
+    3: string;
+    4: string;
+    5: string;
+    6: string;
+};
+export declare const iasMaxSecondsRemain = 255;
+export declare const ColorMode: {
+    HS: number;
+    XY: number;
+    ColorTemp: number;
+};
+export declare const colorModeLookup: {
+    [ColorMode.HS]: string;
+    [ColorMode.XY]: string;
+    [ColorMode.ColorTemp]: string;
+};
+export declare const lockSoundVolume: string[];
+export declare const lockUserStatus: KeyValueNumberString;
+export declare const easyCodeTouchActions: KeyValueNumberString;
+export declare const wiserDimmerControlMode: KeyValueNumberString;
+//# sourceMappingURL=constants.d.ts.map
