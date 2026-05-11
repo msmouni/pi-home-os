@@ -1,0 +1,19 @@
+#!/bin/sh
+
+LOG=/var/log/zigbee2mqtt.log
+
+case "$1" in
+  start)
+    echo "Starting Zigbee2MQTT" >> $LOG
+    cd /opt/zigbee2mqtt || exit 1
+    node index.js >> $LOG 2>&1 &
+    ;;
+  stop)
+    echo "Stopping Zigbee2MQTT" >> $LOG
+    killall node
+    ;;
+  restart)
+    $0 stop
+    $0 start
+    ;;
+esac
