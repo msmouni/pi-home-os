@@ -7,6 +7,11 @@ PI_HOME_DASHBOARD_SITE = https://github.com/msmouni/pi-home-dashboard.git
 PI_HOME_DASHBOARD_SITE_METHOD = git
 PI_HOME_SENSORS_GIT_SUBMODULES = YES
 
+define PI_HOME_DASHBOARD_BUILD_CMDS
+	cd $(@D) && \
+	cargo build --target aarch64-unknown-linux-gnu --release
+endef
+
 define PI_HOME_DASHBOARD_INSTALL_TARGET_CMDS
 	# Install binary
 	$(INSTALL) -D -m 0755 \
@@ -18,4 +23,4 @@ define PI_HOME_DASHBOARD_INSTALL_TARGET_CMDS
 		$(TARGET_DIR)/usr/share/pi-home-dashboard/templates/
 endef
 
-$(eval $(cargo-package))
+$(eval $(generic-package))
