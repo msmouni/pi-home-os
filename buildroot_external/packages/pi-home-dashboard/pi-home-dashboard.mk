@@ -18,11 +18,16 @@ define PI_HOME_DASHBOARD_INSTALL_TARGET_CMDS
 		$(@D)/target/$(RUSTC_TARGET_NAME)/release/pi-home-dashboard \
 		$(TARGET_DIR)/usr/bin/pi-home-dashboard
 
-	# Install web resources
-	$(INSTALL) -D -m 0644 $(@D)/templates/* \
+	# Create web directories
+	$(INSTALL) -d $(TARGET_DIR)/usr/share/pi-home-dashboard/templates
+	$(INSTALL) -d $(TARGET_DIR)/usr/share/pi-home-dashboard/static
+
+	# Copy templates
+	cp -a $(@D)/templates/. \
 		$(TARGET_DIR)/usr/share/pi-home-dashboard/templates/
 
-	$(INSTALL) -D -m 0644 $(@D)/static/* \
+	# Copy static assets recursively
+	cp -a $(@D)/static/. \
 		$(TARGET_DIR)/usr/share/pi-home-dashboard/static/
 endef
 
