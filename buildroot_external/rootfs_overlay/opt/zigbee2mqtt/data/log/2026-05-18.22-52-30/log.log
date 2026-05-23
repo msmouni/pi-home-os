@@ -1,0 +1,64 @@
+[2026-05-18 22:52:30] info: 	z2m: Logging to console, file (filename: log.log)
+[2026-05-18 22:52:30] info: 	z2m: Starting Zigbee2MQTT version 2.10.1 (commit #94751aba)
+[2026-05-18 22:52:30] info: 	z2m: Starting zigbee-herdsman (10.0.7)
+[2026-05-18 22:52:30] info: 	zh:ember: Using default stack config.
+[2026-05-18 22:52:30] info: 	zh:ember: ======== Ember Adapter Starting ========
+[2026-05-18 22:52:30] info: 	zh:ember:ezsp: ======== EZSP starting ========
+[2026-05-18 22:52:30] info: 	zh:ember:uart:ash: ======== ASH Adapter reset ========
+[2026-05-18 22:52:30] info: 	zh:ember:uart:ash: RTS/CTS config is off, enabling software flow control.
+[2026-05-18 22:52:30] info: 	zh:ember:uart:ash: Serial port opened
+[2026-05-18 22:52:30] info: 	zh:ember:uart:ash: ======== ASH starting ========
+[2026-05-18 22:52:31] info: 	zh:ember:uart:ash: ======== ASH connected ========
+[2026-05-18 22:52:31] info: 	zh:ember:uart:ash: ======== ASH started ========
+[2026-05-18 22:52:31] info: 	zh:ember:ezsp: ======== EZSP started ========
+[2026-05-18 22:52:31] info: 	zh:ember: Adapter EZSP protocol version (13) lower than Host. Switched.
+[2026-05-18 22:52:32] info: 	zh:ember: Adapter version info: {"ezsp":13,"revision":"7.4.5 [GA]","build":0,"major":7,"minor":4,"patch":5,"special":0,"type":170}
+[2026-05-18 22:52:32] info: 	zh:ember: [STACK STATUS] Network up.
+[2026-05-18 22:52:32] info: 	zh:ember: [INIT TC] Adapter network does not match config. Leaving network...
+[2026-05-18 22:52:33] info: 	zh:ember: [STACK STATUS] Network down.
+[2026-05-18 22:52:33] info: 	zh:ember: [INIT TC] No valid backup found.
+[2026-05-18 22:52:33] info: 	zh:ember: [INIT TC] Forming from config.
+[2026-05-18 22:52:33] info: 	zh:ember: [INIT FORM] Forming new network with: {"panId":53775,"extendedPanId":[221,221,221,221,221,221,221,221],"radioTxPower":5,"radioChannel":11,"joinMethod":0,"nwkManagerId":0,"nwkUpdateId":0,"channels":134215680}
+[2026-05-18 22:52:33] info: 	zh:ember: [STACK STATUS] Network up.
+[2026-05-18 22:52:33] info: 	zh:ember: [INIT FORM] New network formed!
+[2026-05-18 22:52:33] info: 	zh:ember: [CONCENTRATOR] Started source route discovery. 1248ms until next broadcast.
+[2026-05-18 22:52:33] info: 	zh:controller: Wrote coordinator backup to '/home/muser/zigbee2mqtt/data/coordinator_backup.json'
+[2026-05-18 22:52:33] info: 	z2m: zigbee-herdsman started (reset)
+[2026-05-18 22:52:33] info: 	z2m: Coordinator firmware version: '{"meta":{"build":0,"ezsp":13,"major":7,"minor":4,"patch":5,"revision":"7.4.5 [GA]","special":0,"type":170},"type":"EmberZNet"}'
+[2026-05-18 22:52:33] info: 	z2m: Currently 0 devices are joined.
+[2026-05-18 22:52:33] info: 	z2m: Connecting to MQTT server at mqtt://localhost
+[2026-05-18 22:52:33] info: 	z2m: Connected to MQTT server
+[2026-05-18 22:52:33] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload '{"state":"online"}'
+[2026-05-18 22:52:34] info: 	z2m: Started frontend on port 8080
+[2026-05-18 22:52:34] info: 	z2m: Zigbee2MQTT started!
+[2026-05-18 22:53:00] info: 	z2m: Stopping Zigbee2MQTT (restart=false, code=0, signal=SIGINT)
+[2026-05-18 22:53:01] info: 	z2m:mqtt: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload '{"state":"offline"}'
+[2026-05-18 22:53:01] info: 	z2m: Disconnecting from MQTT server
+[2026-05-18 22:53:01] info: 	z2m: Stopping zigbee-herdsman...
+[2026-05-18 22:53:02] info: 	zh:controller: Wrote coordinator backup to '/home/muser/zigbee2mqtt/data/coordinator_backup.json'
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash: ASH COUNTERS since last clear:
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   Total frames: RX=68, TX=126
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   Cancelled   : RX=0, TX=0
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   DATA frames : RX=67, TX=57
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   DATA bytes  : RX=842, TX=685
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   Retry frames: RX=0, TX=0
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   ACK frames  : RX=0, TX=68
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   NAK frames  : RX=0, TX=0
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   nRdy frames : RX=0, TX=0
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   CRC errors      : RX=0
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   Comm errors     : RX=0
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   Length < minimum: RX=0
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   Length > maximum: RX=0
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   Bad controls    : RX=0
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   Bad lengths     : RX=0
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   Bad ACK numbers : RX=0
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   Out of buffers  : RX=0
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   Retry dupes     : RX=0
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   Out of sequence : RX=0
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash:   ACK timeouts    : RX=0
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash: Port closed, error=null
+[2026-05-18 22:53:02] info: 	zh:ember:uart:ash: ======== ASH stopped ========
+[2026-05-18 22:53:02] info: 	zh:ember:ezsp: ======== EZSP stopped ========
+[2026-05-18 22:53:02] info: 	zh:ember: ======== Ember Adapter Stopped ========
+[2026-05-18 22:53:02] info: 	z2m: Stopped zigbee-herdsman
+[2026-05-18 22:53:02] info: 	z2m: Stopped Zigbee2MQTT

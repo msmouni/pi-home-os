@@ -1,0 +1,19 @@
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://localhost
+
+serial:
+  port: /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0
+  adapter: ember
+
+frontend:
+  enabled: true
+  port: 8080
+
+advanced:
+  network_key: GENERATE
+  pan_id: GENERATE
+
+devices:
+  "0xa4c138d05937aa67":
+    friendly_name: "0xa4c138d05937aa67"

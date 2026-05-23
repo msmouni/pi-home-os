@@ -1,42 +1,34 @@
-version: 5
-homeassistant:
-  enabled: false
-frontend:
-  enabled: true
 mqtt:
   base_topic: zigbee2mqtt
   server: mqtt://localhost
 serial:
   port: /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0
   adapter: ember
+frontend:
+  enabled: true
+  port: 8080
 advanced:
   network_key:
-    - 147
-    - 120
-    - 61
-    - 152
-    - 176
-    - 148
-    - 169
-    - 20
-    - 96
-    - 249
-    - 244
-    - 150
-    - 184
-    - 237
-    - 32
-    - 25
-  pan_id: 59523
-  ext_pan_id:
-    - 171
-    - 229
-    - 16
-    - 57
-    - 76
-    - 181
+    - 85
+    - 232
+    - 83
+    - 123
+    - 240
+    - 180
+    - 87
+    - 72
     - 192
-    - 229
+    - 12
+    - 150
+    - 91
+    - 230
+    - 8
+    - 8
+    - 226
+  pan_id: 53775
 devices:
-  "0xa4c138d05937aa67":
-    friendly_name: "0xa4c138d05937aa67"
+  '0xa4c138d05937aa67':
+    friendly_name: '0xa4c138d05937aa67'
+  '0x60a423fffe45811b':
+    friendly_name: '0x60a423fffe45811b'
+version: 5
