@@ -21,6 +21,9 @@ define PI_HOME_DASHBOARD_INSTALL_TARGET_CMDS
 	# Install web resources
 	$(INSTALL) -D -m 0644 $(@D)/templates/* \
 		$(TARGET_DIR)/usr/share/pi-home-dashboard/templates/
+
+	$(INSTALL) -D -m 0644 $(@D)/static/* \
+		$(TARGET_DIR)/usr/share/pi-home-dashboard/static/
 endef
 
 $(eval $(generic-package))
